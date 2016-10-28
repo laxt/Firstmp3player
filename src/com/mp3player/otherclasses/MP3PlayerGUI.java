@@ -36,6 +36,16 @@ public class MP3PlayerGUI implements ActionListener{
 	private JLabel lblMessage;
 	private JLabel lblPlaying ;
 	
+	
+	
+	/**
+	 * Get MP3player frame
+	 * @return frmMpplayer Main frame for MP3player application
+	 */
+	public JFrame getFrmMpplayer(){
+		return frmMpplayer;
+	}
+
 
 	/**
 	 * Methods call for the GUI and action performed
@@ -46,14 +56,6 @@ public class MP3PlayerGUI implements ActionListener{
 		addActionListeners();
 	}
 	
-	/**
-	 * Get MP3player frame
-	 * @return frmMpplayer Main frame for MP3player application
-	 */
-	public JFrame getFrmMpplayer(){
-		return frmMpplayer;
-	}
-
 
 	/**
 	 * Initializing the contents of the frame.
@@ -130,7 +132,7 @@ public class MP3PlayerGUI implements ActionListener{
 	
 	/**
 	 * Adding action methods for the available buttons
-	 * Empty file check for play button
+	 * Empty file check for play button done
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -155,7 +157,6 @@ public class MP3PlayerGUI implements ActionListener{
 			}
 				
 	else 
-		//(e.getSource() == btnPlay)
 		{		
 		playerMethods.play();
 				}
