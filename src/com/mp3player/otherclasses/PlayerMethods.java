@@ -1,11 +1,11 @@
+/**
+ * @author Laxmana
+ */
+
 package com.mp3player.otherclasses;
 
-
 	import java.io.File;
-
 	import com.mp3player.interfaces.PlayerInterface;
-
-
 	import jaco.mp3.player.MP3Player;
 
 	public class PlayerMethods implements PlayerInterface{

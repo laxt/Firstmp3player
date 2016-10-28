@@ -1,5 +1,5 @@
 /**
- *VG Assignment 
+ *VG Assignment 01
  *@author Laxmana Thapa
  */
 
@@ -7,16 +7,13 @@ package com.mp3player.otherclasses;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.SystemColor;
 import javax.swing.ImageIcon;
 
 
@@ -133,7 +130,7 @@ public class MP3PlayerGUI implements ActionListener{
 	
 	/**
 	 * Adding action methods for the available buttons
-	 * TODO check for empty file
+	 * Empty file check for play button
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
