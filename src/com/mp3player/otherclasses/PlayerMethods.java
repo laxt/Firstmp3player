@@ -10,32 +10,84 @@ package com.mp3player.otherclasses;
 
 	public class PlayerMethods implements PlayerInterface{
 		private MP3Player mp3player;
+		boolean isRunning = false;
 		
+		/**
+		 * Get mp3player 
+		 * @return mp3player
+		 */
 		public MP3Player getMp3player() {
 			return mp3player;
 		}
 
+		/**
+		 * Set mp3player 
+		 * @param mp3player MP3-player
+		 */
 		public void setMp3player(MP3Player mp3player) {
 			this.mp3player = mp3player;
 		}
 
-		public void open(){
-			
+		/**
+		 * Open and play an MP3-file
+		 * @param file MP3-file to open and play
+		 */
+		public void open(File file){
+			if (isRunning)
+				mp3player.stop();
+			try{
+				mp3player = new MP3Player(file);
+				play();
+			} catch(NullPointerException e){
+				e.getMessage();
+			} catch(Exception e){
+				e.getMessage();
+			}
 		}
 
-		public void play(File file){
-			mp3player = new MP3Player(file);
-			mp3player.play();
+		/**
+		 * Play an MP3-file
+		 */	
+		public void play(){
+			try{
+				isRunning = false;
+				mp3player.play();
+			} catch(NullPointerException e){
+				e.getMessage();
+			} catch(Exception e){
+				e.getMessage();
+			}
 		}
 
+		/**
+		 * Pause the playing of an MP3-file
+		 */
 		public void pause(){
-			mp3player.pause();
+			try{
+				isRunning = false;
+				mp3player.pause();
+			} catch(NullPointerException e){
+				e.getMessage();
+			} catch(Exception e){
+				e.getMessage();
+			}
 		}
 
+		/**
+		 * Stop the playing of an MP3-file
+		 */
 		public void stop(){
-			mp3player.stop();
+			try{
+				isRunning = false;
+				mp3player.stop();				
+			} catch(NullPointerException e){
+				e.getMessage();
+			} catch(Exception e){
+				e.getMessage();
+			}
 		}
-		
+
+
+				
+
 	}
-
-
